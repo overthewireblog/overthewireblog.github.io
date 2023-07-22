@@ -2,7 +2,7 @@
 <html>
   <head>
   <meta charset="utf-8">
-  <title>About</title>
+  <title>Level 1 To 2</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -64,9 +64,59 @@
     <div class="container">
       <div class="row">
             <div class="col">
-              <h1 id="about-page">About page</h1>
+              <h1>Level 1 To 2</h1>
+<p>01 Mar 2022 - mike</p>
 
-<p>This page tells you a little bit about me.</p>
+<h3 id="level-1---2">Level 1 -&gt; 2</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in a file called - located in the home directory</p>
+</blockquote>
+
+<p>This level is also quite simple. The password for the next level is stored in a file named <code class="language-plaintext highlighter-rouge">-</code>. So all we have to do is <code class="language-plaintext highlighter-rouge">ssh</code> using the next level <code class="language-plaintext highlighter-rouge">bandit1</code> username and  use <code class="language-plaintext highlighter-rouge">cat</code> to read the file… right?</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> -
+...
+</code></pre></div></div>
+<p>Nope!!! They pulled a sneaky on you. Notice that when you try this, the <strong>command line will stall</strong>.</p>
+
+<p>In bash, the <code class="language-plaintext highlighter-rouge">-</code> will tell the interpreter to look for a <code class="language-plaintext highlighter-rouge">flag</code>. So what we need to do here is tell the command line that <code class="language-plaintext highlighter-rouge">-</code> is a <strong>file</strong>. How do we do this? With <code class="language-plaintext highlighter-rouge">./</code></p>
+
+<p>State that <strong>this current directory, look for file</strong>:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> ./-
+
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+</code></pre></div></div>
+<p>Boom! now you have the password and you’ve hacked the mainframe. Now let’s go to the next level.</p>
+
+
+
+<div class="post-nav">
+  <div>
+    
+      <a href="/2022/02/12/level-0-to-1.html">
+        <span class="unsighted">Previous post:</span>
+        <span aria-hidden="true">&laquo;</span>
+        Level 0 To 1
+      </a>
+    
+  </div>
+  <div class="post-nav-next">
+    
+    
+    
+    
+    
+    <a href="/2022/03/03/level-2-to-3.html">
+      <span class="unsighted">Next post:</span>
+      Level 2 To
+      <span style="white-space: nowrap;">
+      3
+      <span aria-hidden="true">&raquo;</span>
+      </span>
+    </a>
+    
+  </div>
+</div>
 
             </div>
         <div class="col">
