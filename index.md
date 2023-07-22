@@ -10,6 +10,7 @@ TODO List:
   - clean up syntax references on code snippets
   - clean up overall formatting
   - create separate scripts to add to repo
+  - check for new exercises in the bandit category
 
 Wargames is an service setup by the awesome folks at [OverTheWire](http://www.overthewire.org).
 
