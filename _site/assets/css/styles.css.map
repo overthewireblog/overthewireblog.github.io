@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../_sass/main.scss"],"names":[],"mappings":"AAAA;EACE;;;AAEF;EACE","sourcesContent":[".current {\n  color: green;\n}\ncode {\n  background-color: #dfe6e9;\n}\n"],"file":"styles.css"}

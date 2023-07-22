@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row"
+    <div class="col">
+      <p>logo</p>
+    </div>
+    <div class="col">
+    <nav>
+
+      {% for item in site.data.nav %}
+      <li class="nav-item">
+        <a class ="nav-link" href="{{ item.link }}" >{{ item.name }}</a>
+      </li>
+      {% endfor %}
+
+    </nav>
+    </div>
+  </div>
+</div>

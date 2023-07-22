@@ -1,0 +1,13 @@
+<div class="container">
+<p>Sidebar</p>
+
+<h4>Bandit</h4>
+<ul>
+{% for post in site.posts %}
+
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+</div>
