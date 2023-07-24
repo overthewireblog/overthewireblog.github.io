@@ -1,0 +1,343 @@
+{
+  
+
+    "bandit-security-2022-05-30-level-32-to-33-html": {
+      "title": "Level 32 To 33",
+      "content"	 : "Level 32 -&amp;gt; 33Game Instructions  After all this git stuff its time for another escape. Good luck!Let’s get to it!ssh -p 2220 bandit32@bandit.labs.overthewire.orgpassword: 56a9bf19c63d650ce78e6ec0354ee45eThis one took a bit for me to figure out. Actually, I didn’t really know what I was doing. I just tinkered, tried the usual ls cd commands, etc. Then I went to just check what kind of shell I was using…$0 and what do you know… A wild bash shell appeared! Now that I was in bash I just ls the directory and ran cat on the final bandit33 file:Congratulations on solving the last level of this game!At this moment, there are no more levels to play in this game. However, we are constantly workingon new levels and will most likely expand this game with more levels soon.Keep an eye out for an announcement on our usual communication channels!In the meantime, you could play some of our other wargames.That’s it. Hopefully they add some more soon!",
+      "url" : " /bandit/security/2022/05/30/level-32-to-33.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-05-28-level-31-to-32-html": {
+      "title": "Level 31 To 32",
+      "content"	 : "Level 31 -&amp;gt; 32Game Instructions  There is a git repository at ssh://bandit31-git@localhost/home/bandit31-git/repo. The password for the user bandit31-git is the same as for the user bandit31.ssh -p 2220 bandit31@bandit.labs.overthewire.orgpassword: 47e603bb428404d265f59c42920d81e5Clone the repogit clone ssh://bandit31-git@localhost/home/bandit31-git/repoOk let’s check it outcd repoWe can see a sweet README.md in there. What does is say?This time your task is to push a file to the remote repository.Details:    File name: key.txt    Content: &#39;May I come in?&#39;    Branch: masterRight on! All we need to do is create a key.txt file and push it to remote ranch and we’ll be good to go right?Well they pulled a little sneaky on us and add *.txt to the .gitignore file. Which will prevent any type of txt file from being uploaded. No worries. We’ll just remove that line from the .gitignore so we can upload it.nano .gitignore to open the file. Once we have it open we simply delete that line and ctrl+x to save it and remove that pesky attribute.Then we create a file and add the aboe text that is rerquired:echo &quot;May I come in?&quot; &amp;gt; key.txtGreat! Now we’ve created the file so all we need to do stage it and push itAdd the files:git add --allCommit the files:git commit -m &quot;I did it!!&quot;Then finally push to the masterbranchgit push -u origin masterBam! We did it!Here’s what we get as feedback:remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.remote:remote: Well done! Here is the password for the next level:remote: 56a9bf19c63d650ce78e6ec0354ee45eremote:remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.Now we have our next password!56a9bf19c63d650ce78e6ec0354ee45e",
+      "url" : " /bandit/security/2022/05/28/level-31-to-32.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-05-25-level-30-to-31-html": {
+      "title": "Level 30 To 31",
+      "content"	 : "Level 30 -&amp;gt; 31Game Instructions  There is a git repository at ssh://bandit30-git@localhost/home/bandit30-git/repo. The password for the user bandit30-git is the same as for the user bandit30.  Clone the repository and find the password for the next level.Let’s get started by sshing in.ssh -p 2220 bandit30@bandit.labs.overthewire.orgpassword: 5b90576bedb2cc04c86a9e924ce42fafNow let’s clone that repogit clone ssh://bandit30-git@localhost/home/bandit30-git/repocd in to see what’s up…Just an empty README.mdSo we check git logs for version history… nothing.What about other branches? Nope… nothingSo if we dig into git’s tagging feature, we can see there is one called secretgit show secret gives us our password:47e603bb428404d265f59c42920d81e5",
+      "url" : " /bandit/security/2022/05/25/level-30-to-31.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-05-22-level-29-to-30-html": {
+      "title": "Level 29 To 30",
+      "content"	 : "Level 29 -&amp;gt; 30Game Instructions  There is a git repository at ssh://bandit29-git@localhost/home/bandit29-git/repo. The password for the user bandit29-git is the same as for the user bandit29.Login as bandit29ssh -p 2220 bandit29@bandit.labs.overthewire.orgpassword: bbc96594b4e001778eee9975372716b2Clone the repo to whatever temp directory you choose.git clone ssh://bandit29-git@localhost/home/bandit29-git/repoNow cd into it to take a look  around.There’s a README file in there but nothing to go off of. Let’s check versions and commit history like before:git log -pNothing shows up. There must be some branches handing around somewhere either local or remote. Let’s list all remote and local branches:git branch -aWe see a couple of them. Let’s switch to the dev branch to see if we get anything.git checkout devOk let’s check this README. Woo! First try:Some notes for bandit30 of bandit.## credentials- username: bandit30- password: 5b90576bedb2cc04c86a9e924ce42fafWe now have the password for bandit30. On to the next!",
+      "url" : " /bandit/security/2022/05/22/level-29-to-30.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-05-15-level-28-to-29-html": {
+      "title": "Level 28 To 29",
+      "content"	 : "Level 28 -&amp;gt; 29Game Instructions  There is a git repository at ssh://bandit28-git@localhost/home/bandit28-git/repo. The password for the user bandit28-git is the same as for the user bandit28.I’m going to stay in the same shell as the last exercise for this one and just clone the repo.If you closed out, however, just login with bandit28ssh -p 2220 bandit28@bandit.labs.overthewire.orgpassword: 0ef186ac70e04ea33b4c1853d2526fa2git clone ssh://bandit28-git@localhost/home/bandit28-git/repo repo2 * You may notice I’ve add a repo2 to specify folder. I don’t want to get confused between the last repo and this one.Password is 0ef186ac70e04ea33b4c1853d2526fa2cd into repo2 and let’s have a look.Another README.md but with no information inside. Knowing that this is git and well, the whole point is version control and managing various commits, etc. Let’s check the changes to the repo.git logbandit27@bandit:/tmp/repo12/repo2$ git logcommit edd935d60906b33f0619605abd1689808ccdd5eeAuthor: Morla Porla &amp;lt;morla@overthewire.org&amp;gt;Date:   Thu May 7 20:14:49 2020 +0200   fix info leakcommit c086d11a00c0648d095d04c089786efef5e01264Author: Morla Porla &amp;lt;morla@overthewire.org&amp;gt;Date:   Thu May 7 20:14:49 2020 +0200   add missing datacommit de2ebe2d5fd1598cd547f4d56247e053be3fdc38Author: Ben Dover &amp;lt;noone@overthewire.org&amp;gt;Date:   Thu May 7 20:14:49 2020 +0200   initial commit of README.mdLooks like they patched an “info leak”, so let’s check that commit history:git log -p- username: bandit29-- password: bbc96594b4e001778eee9975372716b2+- password: xxxxxxxxxxThere we go we have the next password:bbc96594b4e001778eee9975372716b2",
+      "url" : " /bandit/security/2022/05/15/level-28-to-29.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-05-13-level-27-to-28-html": {
+      "title": "Level 27 To 28",
+      "content"	 : "Level 27-28Game Instructions  There is a git repository at ssh://bandit27-git@localhost/home/bandit27-git/repo. The password for the user bandit27-git is the same as for the user bandit27.  Clone the repository and find the password for the next level.Start it up:ssh -p 2220 bandit27@bandit.labs.overthewire.orgpassword: 3ba3118a22e93127a4ed485be72ef5eaClone the repogit clone ssh://bandit27-git@localhost/home/bandit27-git/repoNote the password is the same for the git cloning as for the ssh login.Ok now we have our repo so we cd repo to get into the directory and there’s only one file REAMDESuper easy just cat the file and there’s the password:0ef186ac70e04ea33b4c1853d2526fa2",
+      "url" : " /bandit/security/2022/05/13/level-27-to-28.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-05-12-level-26-tp-27-html": {
+      "title": "Level 26 Tp 27",
+      "content"	 : "Level 26 -&amp;gt; 27Game Instructions  Good job getting a shell! Now hurry and grab the password for bandit27!Ok now this is easy if we keep the same terminal open from the last time. All we are going to do is use the power of vim to execute a couple of simple shell commands.Go back to the command area of vim and type in:set shell=/bin/bash Note: you won’t see confirmationNow type :shell and you should be good to go!Now navigate to ~ and use the bandit27-do file to cat as bandit27./bandit27-do cat /etc/bandit_pass/bandit27Boom. Done.3ba3118a22e93127a4ed485be72ef5ea",
+      "url" : " /bandit/security/2022/05/12/level-26-tp-27.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-05-11-level-25-to-26-html": {
+      "title": "Level 25 To 26",
+      "content"	 : "Level 25 -&amp;gt; 26Game Instructions  Logging in to bandit26 from bandit25 should be fairly easy… The shell for user bandit26 is not /bin/bash, but something else. Find out what it is, how it works and how to break out of it.Let’s get started:ssh -p 2220 bandit25@bandit.labs.overthewire.orgpassword: uNG9O58gUE7snukf3bvZ0rxhtnjzSGzGSo here we need to figure out what type of shell bandit26 is using.First, we’ll check the passwd file for bandit26cat /etc/passwd | grep bandit26We getbandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtextSo no let’s grep the file we’re showncat /usr/bin/showtextThis gives us#!/bin/shexport TERM=linuxmore ~/text.txtexit 0So now we know he’s using #1/bin/shThen we need to figure out how it works and how to break out of it.This works by using the sshkey.private that is provided in the home directory. However, you’ll notice that the shell immediately closes out. So let’s take a look at the above pulled shell config… Notice the more ~/text.txt. It’s using more to view the file so we’ll use that to break in.No more will show one page of data at a time. So what happens if the window is just a bit too small? It won’t close. This will allow us to use vim to break out an gain a shell.Make the terminal window super tiny (less than 6 lines) and try to get back in using ssh -i sshkey.private bandit26@localhost. You’ll notice it hangs (Yay!).Now hit v to bring up command options in vim. Type::e /etc/bandit_pass/bandit26Now we have it!5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6ZDon’t close the terminal we need the same shell to finish the next level!!",
+      "url" : " /bandit/security/2022/05/11/level-25-to-26.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-05-03-level-24-to-25-html": {
+      "title": "Level 24 To 25",
+      "content"	 : "Level 24 -&amp;gt; 25Game Instructions  A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.This one is our first scripting for brute force…ssh -p 2220 bandit24@bandit.labs.overthewire.orgpassword: UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZWe have a daemon listening on port 30002 for us to send both the previous password + a 4 digit pin. We can do this manually and take a week or so, or we can script it out to try the 10000 combinations. Our First Brute AttackHere’s a script:#!/usr/bin/env python3# coding: utf-8import sysimport socketpincode = 0password = &quot;UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ&quot;try:    # Connect to server    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)    s.connect((&quot;127.0.0.1&quot;, 30002))    # Print welcome message    welcome_msg = s.recv(2048)    print(welcome_msg)    # Try brute-forcing    while pincode &amp;lt; 10000:        pincode_string = str(pincode).zfill(4)        message=password+&quot; &quot;+pincode_string+&quot;n&quot;        # Send message        s.sendall(message.encode())        receive_msg = s.recv(1024)        # Check result        if &quot;Wrong&quot; in receive_msg:            print(&quot;Wrong PINCODE: %s&quot; % pincode_string)        else:            print(receive_msg)            break        pincode += 1finally:    sys.exit(1)After a while we’ll get to the right combination. The pin is 2586 as of my writing.Next password:uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG",
+      "url" : " /bandit/security/2022/05/03/level-24-to-25.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-05-02-level-23-to-24-html": {
+      "title": "Level 23 To 24",
+      "content"	 : "Level 23 -&amp;gt; 24Game Instructions  A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.  NOTE: This level requires you to create your own first shell-script. This is a very big step and you should be proud of yourself when you beat this level!  NOTE 2: Keep in mind that your shell script is removed once executed, so you may want to keep a copy around…This one looks a bit similar to the previous 2 levels… Let’s dig in!ssh -p 2220 bandit23@bandit.labs.overthewire.orgpassword: jc1udXuA1tiHqjIsL8yaapX5XIAI6i0nAs the hint says: We need to investigate the /etc/cron.d file to see what is happening:#!/bin/bashmyname=$(whoami)cd /var/spool/$mynameecho &quot;Executing and deleting all scripts in /var/spool/$myname:&quot;for i in * .*;do    if [ &quot;$i&quot; != &quot;.&quot; -a &quot;$i&quot; != &quot;..&quot; ];    then        echo &quot;Handling $i&quot;        timeout -s 9 60 ./$i        rm -f ./$i    fidoneWe can see that the file is systematically (every 60 sceonds) running every script as root in the /var/spool/$myname directory and immediately deleting the file after executing.Because the script is being run as root, we can exploit this if we can manage to get a script in the /var/spool/bandit24 directory that spits on the password.First, let’s create a directory to do some work in:mkdir /tmp/myfancydirectoryAnd a file that the password will be copied to:touch /tmp/myfancydirectory/thisisthepasswordNext, let’s whip up a simple script:nano istealyourpass.sh#!/bin/bashcat /etc/bandit_pass24 &amp;gt; /tmp/myfancydirectory/thisisthepasswordThis will copy the password to a file called thisisthepasswordLet’s chmod it so the script can execute itchmod 777 /tmp/myfancydirectory/istealyourpassNow let’s quickly copy the file to the /var/spool/bandit24 directory so it can be picked upcp /tmp/myfancydirectory/istealyourpassAnd we wait for it to run.After a little bit we check the directory and bam we have the password:New password: UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ",
+      "url" : " /bandit/security/2022/05/02/level-23-to-24.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-30-level-22-to-23-html": {
+      "title": "Level 22 To 23",
+      "content"	 : "Level 22 -&amp;gt; 23Game Instructions  A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.  NOTE: Looking at shell scripts written by other people is a very useful skill. The script for this level is intentionally made easy to read. If you are having problems understanding what it does, try executing it to see the debug information it prints.Let’s start by getting into the new gamesssh -p 2220 bandit22@bandit.labs.overthewire.orgpassword: Yk7owGAcWjwMVRwrTesJEwB7WVOiILLINow we have another cronjob to look into.Start by cding into the /etc/cron.d directory for the next level bandit23cd /etc/cron.dThen cat to get some more info.cat cronjob_bandit23And we get:@reboot bandit23 /usr/bin/cronjob_bandit23.sh  &amp;amp;&amp;gt; /dev/null* * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &amp;amp;&amp;gt; /dev/nullNow let’s see what’s in that file:cat /usr/bin/cronjob_bandit23.shAnd we get:#!/bin/bashmyname=$(whoami)mytarget=$(echo I am user $myname | md5sum | cut -d &#39; &#39; -f 1)echo &quot;Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget&quot;cat /etc/bandit_pass/$myname &amp;gt; /tmp/$mytargetSo we see a pretty simple bash script. Now what are these variables? The script tells us:myname=$whoami - we can simply run whoami to get the value of bandit22mytarget=$(echo I am user $myname | md5sum | cut -d &#39; &#39; -f 1) - Let’s just run this string with the peice we know of - $myname (but use bandit23 which is the next level)echo I am user bandit23 | md5sum | cut -d &#39; &#39; -f 1And we get:8ca319486bfbbc3663ea0fbe81326349Now we know what file will be in the tmp directory with the password dump:/tmp/8ca319486bfbbc3663ea0fbe81326349 let’s cat that file:cat /tmp/8ca319486bfbbc3663ea0fbe81326349 and bam… passwordjc1udXuA1tiHqjIsL8yaapX5XIAI6i0n",
+      "url" : " /bandit/security/2022/04/30/level-22-to-23.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-27-level-21-to-22-html": {
+      "title": "Level 21 To 22",
+      "content"	 : "Level 21 -&amp;gt; 22Game Instructions  A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.Get into the remote machine:ssh -p 2220 bandit21@bandit.labs.overthewire.orgpassword: gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGrLooking into the direcory of /etc/cron.d we see a few differenct cronjobs. Let’s cat the cronjob_bandit22 file and see what’s up@reboot bandit22 /usr/bin/cronjob_bandit22.sh &amp;amp;&amp;gt; /dev/null* * * * * bandit22 /usr/bin/cronjob_bandit22.sh &amp;amp;&amp;gt; /dev/nullNow we know where the sh file is we can cat that as well for more information:cat /usr/bin/cronjob_bandit22.shThis give us the source code of the sh file:#!/bin/bashchmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgvcat /etc/bandit_pass/bandit22 &amp;gt; /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgvOnce more, let’s just cat the file in /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgvcat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgvNow we have our next password! Woop!Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI",
+      "url" : " /bandit/security/2022/04/27/level-21-to-22.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-25-level-20-to-21-html": {
+      "title": "Level 20 To 21",
+      "content"	 : "Level 20 -&amp;gt; 21Game Instructions  There is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).First we send the string of the last password to a TCP server running on a port of our choice (in this exampe 61137).echo &quot;GbKksEFF4yrVs6il55v6gwY5aVje5f0j&quot; | nc -l localhost -p 61137 &amp;amp;Then we check to make sure it’s workingps auxUSER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMANDbandit20   658  0.0  0.1  21148  5144 pts/54   Ss   17:22   0:00 -bashbandit20  1103  0.0  0.1  21148  4860 pts/35   Ss+  16:36   0:00 -bashbandit20  1157  0.0  0.0   6300  1584 pts/39   S+   16:36   0:00 nc -l localhostbandit20  1523  0.0  0.0   6300  1660 pts/54   S    17:24   0:00 nc -l localhostbandit20  1696  0.0  0.0  19188  2372 pts/54   R+   17:24   0:00 ps auxbandit20 31119  0.0  0.1  21148  4968 pts/39   Ss   16:32   0:00 -bashWe can see that it is running on process ID 1523No we can run the binary to ask the server to send us the next one:./suconnect 61137Next password:gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr",
+      "url" : " /bandit/security/2022/04/25/level-20-to-21.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-22-leve-19-to-20-html": {
+      "title": "Leve 19 To 20",
+      "content"	 : "Level 19 -&amp;gt; 20Game Instructions  To gain access to the next level, you should use the setuid binary in the homedirectory. Execute it without arguments to find out how to use it. The password for this level can be found in the usual place (/etc/bandit_pass), after you have used the setuid binary.Using the bandit20-do setuid binary essentially just lets us run a command as that user. It’s binary so trying to cat the file won’t let you see the underlying code. So just trust the exercise it’s letting us work as bandit20 to do a thing.So let’s run the binary and simply run a command after to read the password file in /etc/bandit_pass./bandit20-do cat /etc/bandit_pass/bandit20Now it’ll spit out the next password for us.GbKksEFF4yrVs6il55v6gwY5aVje5f0j",
+      "url" : " /bandit/security/2022/04/22/leve-19-to-20.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-15-level-18-to-19-html": {
+      "title": "Level 18 To 19",
+      "content"	 : "Level 18 -&amp;gt; 19Game instructions  The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.When we put in the password, as mentioned above, we are successfully logged in – only to be logged out immediately. However, they’ve let us know that there is a readme file in the home directory. So what if we can attach a cat command to scoop the password before we are logged out?ssh -p 2220 bandit18@bandit.labs.overthewire.org &quot;cat ~/readme&quot;This will let us get that password before we get kicked out. Password for bandit19IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x",
+      "url" : " /bandit/security/2022/04/15/level-18-to-19.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-11-level-17-to-18-html": {
+      "title": "Level 17 To 18",
+      "content"	 : "Level 17 -&amp;gt; 18Game Instructions  There are 2 files in the homedirectory: passwords.old and passwords.new. The password for the next level is in passwords.new and is the only line that has been changed between passwords.old and passwords.new  NOTE: if you have solved this level and see ‘Byebye!’ when trying to log into bandit18, this is related to the next level, bandit19First we create a key from the information from the last level in /tmp/bandit17/now we just nano bandit17.key and paste in the information.This part was frustrating for me and took me a while. You need to set permissions on the file or it won’t take.chmod 600 bandit17.keyThen we can just used the command we used in a previous level to use that key without a password:ssh -i bandit17.key bandit17@localhost Bam… we’re in.Now we need to diff these files passwords.new and passwords.old to see what the difference is.There’s only 2 options and this is the one:kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd",
+      "url" : " /bandit/security/2022/04/11/level-17-to-18.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-09-level-16-to-17-html": {
+      "title": "Level 16 To 17",
+      "content"	 : "Level 16 -&amp;gt; 17Game Instructions  The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL and which don’t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.We start here by finding the ports and making sure they accept SSL:Running nmap with an ssl enumerator script on ports 30000 through 32000nmap -sV --script ssl-enum-ciphers -p 30000-32000 localhostThis returned quote a few ports so I ended up just trying them one by one. Turns out it was port 31790Using openssl, we send the passkey through:openssl s_client -connect localhost:31790When prompted just throw in the code:cluFn7wTiGryunymYOu4RcffSxQluehdNow we get a private key:```—–BEGIN RSA PRIVATE KEY—–MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJimZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQJa6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTuDSt2mcNn4rhAL+JFr56o4T6z8WWAW18BR6yGrMq7Q/kALHYW3OekePQAzL0VUYbWJGTi65CxbCnzc/w4+mqQyvmzpWtMAzJTzAzQxNbkR2MBGySxDLrjg0LWN6sK7wNXx0YVztz/zbIkPjfkU1jHS+9EbVNj+D1XFOJuaQIDAQABAoIBABagpxpM1aoLWfvDKHcj10nqcoBc4oE11aFYQwik7xfW+24pRNuDE6SFthOar69jp5RlLwD1NhPx3iBlJ9nOM8OJ0VToum43UOS8YxF8WwhXriYGnc1sskbwpXOUDc9uX4+UESzH22P29ovdd8WErY0gPxun8pbJLmxkAtWNhpMvfe0050vk9TL5wqbu9AlbssgTcCXkMQnPw9nCYNN6DDP2lbcBrvgT9YCNL6C+ZKufD52yOQ9qOkwFTEQpjtF4uNtJom+asvlpmS8AvLY9r60wYSvmZhNqBUrj7lyCtXMIu1kkd4w7F77k+DjHoAXyxcUp1DGL51sOmama+TOWWgECgYEA8JtPxP0GRJ+IQkX262jM3dEIkza8ky5moIwUqYdsx0NxHgRRhORT8c8hAuRBb2G82so8vUHk/fur85OEfc9TncnCY2crpoqsghifKLxrLgtT+qDpfZnxSatLdt8GfQ85yA7hnWWJ2MxF3NaeSDm75Lsm+tBbAiyc9P2jGRNtMSkCgYEAypHdHCctNi/FwjulhttFx/rHYKhLidZDFYeiE/v45bN4yFm8x7R/b0iE7KaszX+ExdvtSghaTdcG0Knyw1bpJVyusavPzpaJMjdJ6tcFhVAbAjm7enCIvGCSx+X3l5SiWg0AR57hJglezIiVjv3aGwHwvlZvtszK6zV6oXFAu0ECgYAbjo46T4hyP5tJi93V5HDiTtiek7xRVxUl+iU7rWkGAXFpMLFteQEsRr7PJ/lemmEY5eTDAFMLy9FL2m9oQWCgR8VdwSk8r9FGLS+9aKcV5PI/WEKlwgXinB3OhYimtiG2Cg5JCqIZFHxD6MjEGOiuL8ktHMPvodBwNsSBULpG0QKBgBAplTfC1HOnWiMGOU3KPwYWt0O6CdTkmJOmL8Niblh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkUYOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM77pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+9Cq0bdxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=—–END RSA PRIVATE KEY—–",
+      "url" : " /bandit/security/2022/04/09/level-16-to-17.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-07-level-15-to-16-html": {
+      "title": "Level 15 To 16",
+      "content"	 : "Level 15 -&amp;gt; 16Game Instructions  The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.  Helpful note: Getting “HEARTBEATING” and “Read R BLOCK”? Use -ign_eof and read the “CONNECTED COMMANDS” section in the manpage. Next to ‘R’ and ‘Q’, the ‘B’ command also works in this version of that command…Similar to the last exercise, we don’t log in to the game with ssl but rather send the previous passphrase through a port. This time it requires SSL so we’ll be using OpenSSL to send it through to port 30001openssl s_client -connect localhost:30001Now we can paste in BfMYroe26WYalil77FoDi9qh59eK5xNrand we’ve got the next key:cluFn7wTiGryunymYOu4RcffSxQluehd",
+      "url" : " /bandit/security/2022/04/07/level-15-to-16.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-05-level-14-to-15-html": {
+      "title": "Level 14 To 15",
+      "content"	 : "Level 14 -&amp;gt; 15Game Instructions  The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.This one we don’t SSH into. We stay logged in from the last exercise and use that to send the string to port 30000 to see if we can get the next password.Previous password: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3eLet’s use nc to try to connect on port 30000.** Using -v flag to give us a little feedbacknc localhost 30000You should get an open message.Now we paste the password:4wcYUJFw0k0XLShlDzztnTBHiqxU3b3eHit enter and bam: BfMYroe26WYalil77FoDi9qh59eK5xNr",
+      "url" : " /bandit/security/2022/04/05/level-14-to-15.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-04-level-13-to-14-html": {
+      "title": "Level 13 To 14",
+      "content"	 : "Level 13 -&amp;gt; 14Game Instructions  The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working onAs usual, we start by sshing into the machinessh -p 2220 bandit12@bandit.labs.overthewire.orgpassword: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYLHere they gave us a sweet sweet sshkey.private ssh key which is basically like leaving us a key under the rug.ssh -i sshkey.private bandit14@localhost logs us right into the system as bandit14 and bam, we’re in.Not just a simple cat /etc/bandit_pass/bandit14 gives us the next pwd.4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e",
+      "url" : " /bandit/security/2022/04/04/level-13-to-14.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-03-level-12-to-13-html": {
+      "title": "Level 12 To 13",
+      "content"	 : "Level 12 -&amp;gt; 13Game Instructions  The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!)Let’s ssh in:ssh -p 2220 bandit12@bandit.labs.overthewire.orgpassword: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUuThis one was a bit extensive. More of an art than anything else.When we cat the file we get a hex hexdumpbandit12@bandit:/tmp/temp$ cat datanew.txt00000000: 1f8b 0808 0650 b45e 0203 6461 7461 322e  .....P.^..data2.00000010: 6269 6e00 013d 02c2 fd42 5a68 3931 4159  bin..=...BZh91AY00000020: 2653 598e 4f1c c800 001e 7fff fbf9 7fda  &amp;amp;SY.O...........00000030: 9e7f 4f76 9fcf fe7d 3fff f67d abde 5e9f  ..Ov...}?..}..^.00000040: f3fe 9fbf f6f1 feee bfdf a3ff b001 3b1b  ..............;.00000050: 5481 a1a0 1ea0 1a34 d0d0 001a 68d3 4683  T......4....h.F.00000060: 4680 0680 0034 1918 4c4d 190c 4000 0001  F....4..LM..@...00000070: a000 c87a 81a3 464d a8d3 43c5 1068 0346  ...z..FM..C..h.F00000080: 8343 40d0 3400 0340 66a6 8068 0cd4 f500  .C@.4..@f..h....00000090: 69ea 6800 0f50 68f2 4d00 680d 06ca 0190  i.h..Ph.M.h.....000000a0: 0000 69a1 a1a0 1ea0 194d 340d 1ea1 b280  ..i......M4.....000000b0: f500 3406 2340 034d 3400 0000 3403 d400  ..4.#@.M4...4...000000c0: 1a07 a832 3400 f51a 0003 43d4 0068 0d34  ...24.....C..h.4000000d0: 6868 f51a 3d43 2580 3e58 061a 2c89 6bf3  hh..=C%.&amp;gt;X..,.k.000000e0: 0163 08ab dc31 91cd 1747 599b e401 0b06  .c...1...GY.....000000f0: a8b1 7255 a3b2 9cf9 75cc f106 941b 347a  ..rU....u.....4z00000100: d616 55cc 2ef2 9d46 e7d1 3050 b5fb 76eb  ..U....F..0P..v.00000110: 01f8 60c1 2201 33f0 0de0 4aa6 ec8c 914f  ..`.&quot;.3...J....O00000120: cf8a aed5 7b52 4270 8d51 6978 c159 8b5a  ....{RBp.Qix.Y.Z00000130: 2164 fb1f c26a 8d28 b414 e690 bfdd b3e1  !d...j.(........00000140: f414 2f9e d041 c523 b641 ac08 0c0b 06f5  ../..A.#.A......00000150: dd64 b862 1158 3f9e 897a 8cae 32b0 1fb7  .d.b.X?..z..2...00000160: 3c82 af41 20fd 6e7d 0a35 2833 41bd de0c  &amp;lt;..A .n}.5(3A...00000170: 774f ae52 a1ac 0fb2 8c36 ef58 537b f30a  wO.R.....6.XS{..00000180: 1510 cab5 cb51 4231 95a4 d045 b95c ea09  .....QB1...E...00000190: 9fa0 4d33 ba43 22c9 b5be d0ea eeb7 ec85  ..M3.C&quot;.........000001a0: 59fc 8bf1 97a0 87a5 0df0 7acd d555 fc11  Y.........z..U..000001b0: 223f fdc6 2be3 e809 c974 271a 920e acbc  &quot;?..+....t&#39;.....000001c0: 0de1 f1a6 393f 4cf5 50eb 7942 86c3 3d7a  ....9?L.P.yB..=z000001d0: fe6d 173f a84c bb4e 742a fc37 7b71 508a  .m.?.L.Nt*.7{qP.000001e0: a2cc 9cf1 2522 8a77 39f2 716d 34f9 8620  ....%&quot;.w9.qm4..000001f0: 4e33 ca36 eec0 cd4b b3e8 48e4 8b91 5bea  N3.6...K..H...[.00000200: 01bf 7d21 0b64 82c0 3341 3424 e98b 4d7e  ..}!.d..3A4$..M~00000210: c95c 1b1f cac9 a04a 1988 43b2 6b55 c6a6  ......J..C.kU..00000220: 075c 1eb4 8ecf 5cdf 4653 064e 84da 263d  ......FS.N..&amp;amp;=00000230: b15b bcea 7109 5c29 c524 3afc d715 4894  .[..q.).$:...H.00000240: 7426 072f fc28 ab05 9603 b3fc 5dc9 14e1  t&amp;amp;./.(......]...00000250: 4242 393c 7320 98f7 681d 3d02 0000       BB9&amp;lt;s ..h.=...First we reverse the hex dump with xxd -rNow we’re given a compressed file that we have no idea what program compressed it, nor do we know how many times it has been compressed. So all we can do is attempt the extraction repeatedly alternating between tar gzip and bzip2 (the most common compressors)Eventually the scrambled code starts to give out hints. You’ll see ‘data6.bin, data8.bin, etc’ in the code when you use cat. This will give you a good idea that you’re headed in the right direction. Once you’re done, you’ll be left with a file named data8 with no file extension. cat this file and you’ll get:The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYLBoom.",
+      "url" : " /bandit/security/2022/04/03/level-12-to-13.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-04-02-level-11-to-12-html": {
+      "title": "Level 11 To 12",
+      "content"	 : "Level 11 -&amp;gt; 12Game Instructions  The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positionsssh into the serverssh -p 2220 bandit11@bandit.labs.overthewire.orgpassword: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPRWhen we cat the data.txt file, we get this jumble:Gur cnffjbeq vf 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHhBased off of the game description. We know it is just rotated text 13 times. (Look up rot13)Here we’ll use tr to reverse the rot13 “encryption”. A primitive form of letter scrambling (not secure).cat data.txt | tr &#39;n-za-mN-ZA-M&#39; &#39;a-zA-Z&#39;Now we get a print of:The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUuAll set for the next level.",
+      "url" : " /bandit/security/2022/04/02/level-11-to-12.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-03-21-level-10-to-11-html": {
+      "title": "Level 10 To 11",
+      "content"	 : "Level 10 -&amp;gt; 11Game Instructions  The password for the next level is stored in the file data.txt, which contains base64 encoded datassh into the serverssh -p 2220 bandit10@bandit.labs.overthewire.orgpassword: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLkSince they gave us a solid clue by mentioning the base64 encoding, this one was pretty easy.cat data.txt | base64 and we get:The password is IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPRSweet.",
+      "url" : " /bandit/security/2022/03/21/level-10-to-11.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-03-20-level-9-to-10-html": {
+      "title": "Level 9 To 10",
+      "content"	 : "Level 9 -&amp;gt; 10Game Instructions  The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.Let’s ssh into the serverssh -p 2220 bandit9@bandit.labs.overthewire.orgpassword: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhRThis one was more of an art than anything. I simply cat the contents of the data.txt file and searched for multiple = signs in a row.Found it. truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk",
+      "url" : " /bandit/security/2022/03/20/level-9-to-10.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-03-18-level-8-to-9-html": {
+      "title": "Level 8 To 9",
+      "content"	 : "Level 8 -&amp;gt; 9Game Instructions  The password for the next level is stored in the file data.txt and is the only line of text that occurs only onceLet’s ssh into the next game:ssh -p 2220 bandit8@bandit.labs.overthewire.orgpassword: cvX2JJa4CFALtqS87jk27qwqGhBM9plVThis one seems more difficult but really isn’t… Let’s see what we need to do to find this file:  We need to sort all of the lines in the file  We then need to find out which one of these lines is uniqueWe’ll use something called Piping | here.sort data.txt | uniq -uThe above like uses the sort command to sort all lines, then uses uniq with the flag -u to find the only unique line.password: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhRDone and done… we just found that password… no big deal.",
+      "url" : " /bandit/security/2022/03/18/level-8-to-9.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-03-17-level-7-to-8-html": {
+      "title": "Level 7 To 8",
+      "content"	 : "Level 7 -&amp;gt; 8Game Instructions  The password for the next level is stored in the file data.txt next to the word millionthOooo… now it’s time for some sleuthing. We need to read the data.txt file and find the word “millionth”.First things first, let’s ssh into that server:ssh -p 2220 bandit7@bandit.labs.overthewire.orgpassword: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzsNow if we ls to see the current directory, we’ll see a single file named data.txt. Lets use grep to search the file for “millionth”grep &quot;millionth&quot; data.txtThis will give us:millionthcvX2JJa4CFALtqS87jk27qwqGhBM9plVYay! That one was pretty easy.",
+      "url" : " /bandit/security/2022/03/17/level-7-to-8.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-03-16-level-6-to-7-html": {
+      "title": "Level 6 To 7",
+      "content"	 : "Level 6 -&amp;gt; 7Game Instructions  The password for the next level is stored somewhere on the server and has all of the following properties:owned by user bandit7owned by group bandit633 bytes in sizeAlrighty let’s get started on this badboy.Get ssh‘d in there:ssh -p 2220 bandit6@bandit.labs.overthewire.orgpassword: DXjZPULLxYr17uwoI01bNLQbtFemEgo7Now the instructions say it is somewhere on the server. This means that we can’t operate from the /home directory like we have been. Let’s get to root:cd /This will get us to the root directory where we can begin…Again, let’s use find to search these attributes. This time, however, we’re going to add all of them together for one-command awesomeness:# This command is searching Everywhere for a file owned by group `bandit6` and user `bandit7` that will be exactly 33 bytes in sizefind * -size 33c -user bandit7 -group bandit6This gives us the following:bandit6@bandit:/$ find * -size 33c -user bandit7 -group bandit6find: ‘boot/lost+found’: Permission deniedfind: ‘cgroup2/csessions’: Permission deniedfind: ‘etc/ssl/private’: Permission deniedfind: ‘etc/lvm/backup’: Permission deniedfind: ‘etc/lvm/archive’: Permission deniedfind: ‘etc/polkit-1/localauthority’: Permission deniedfind: ‘home/bandit28-git’: Permission deniedfind: ‘home/bandit30-git’: Permission deniedfind: ‘home/bandit31-git’: Permission deniedfind: ‘home/bandit5/inhere’: Permission deniedfind: ‘home/bandit27-git’: Permission deniedfind: ‘home/bandit29-git’: Permission deniedfind: ‘lost+found’: Permission deniedfind: ‘proc/tty/driver’: Permission deniedfind: ‘proc/7538/task/7538/fd/6’: No such file or directoryfind: ‘proc/7538/task/7538/fdinfo/6’: No such file or directoryfind: ‘proc/7538/fd/5’: No such file or directoryfind: ‘proc/7538/fdinfo/5’: No such file or directoryfind: ‘root’: Permission deniedfind: ‘run/lvm’: Permission deniedfind: ‘run/screen/S-bandit15’: Permission deniedfind: ‘run/screen/S-bandit12’: Permission deniedfind: ‘run/screen/S-bandit5’: Permission deniedfind: ‘run/screen/S-bandit17’: Permission deniedfind: ‘run/screen/S-bandit7’: Permission deniedfind: ‘run/screen/S-bandit13’: Permission deniedfind: ‘run/screen/S-bandit11’: Permission deniedfind: ‘run/screen/S-bandit9’: Permission deniedfind: ‘run/screen/S-bandit27’: Permission deniedfind: ‘run/screen/S-bandit25’: Permission deniedfind: ‘run/screen/S-bandit2’: Permission deniedfind: ‘run/screen/S-bandit16’: Permission deniedfind: ‘run/screen/S-bandit20’: Permission deniedfind: ‘run/screen/S-bandit30’: Permission deniedfind: ‘run/screen/S-bandit14’: Permission deniedfind: ‘run/screen/S-bandit31’: Permission deniedfind: ‘run/screen/S-bandit8’: Permission deniedfind: ‘run/screen/S-bandit4’: Permission deniedfind: ‘run/screen/S-bandit29’: Permission deniedfind: ‘run/screen/S-bandit28’: Permission deniedfind: ‘run/screen/S-bandit21’: Permission deniedfind: ‘run/screen/S-bandit26’: Permission deniedfind: ‘run/screen/S-bandit24’: Permission deniedfind: ‘run/screen/S-bandit22’: Permission deniedfind: ‘run/screen/S-bandit1’: Permission deniedfind: ‘run/screen/S-bandit19’: Permission deniedfind: ‘run/screen/S-bandit23’: Permission deniedfind: ‘run/shm’: Permission deniedfind: ‘run/lock/lvm’: Permission deniedfind: ‘sys/fs/pstore’: Permission deniedfind: ‘tmp’: Permission deniedfind: ‘var/spool/bandit24’: Permission deniedfind: ‘var/spool/rsyslog’: Permission deniedfind: ‘var/spool/cron/crontabs’: Permission deniedfind: ‘var/log’: Permission deniedfind: ‘var/tmp’: Permission deniedfind: ‘var/cache/ldconfig’: Permission deniedfind: ‘var/cache/apt/archives/partial’: Permission deniedvar/lib/dpkg/info/bandit7.password ## &amp;lt;----------------------Only file we can accessfind: ‘var/lib/apt/lists/partial’: Permission deniedfind: ‘var/lib/polkit-1’: Permission deniedNotice the large list of permission denied results?This game made it a little easy for us this time. The only file we can access isvar/lib/dpkg/info/bandit7.passwordSo let’s cat that file and bam! Password.password: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs",
+      "url" : " /bandit/security/2022/03/16/level-6-to-7.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-03-15-level-5-to-6-html": {
+      "title": "Level 5 To 6",
+      "content"	 : "Level 5 -&amp;gt; 6Game Instructions  The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:human-readable1033 bytes in sizenot executableSo we’re looking for a file that is:  Human readable  1033 bytes in size  Non-executableLet’s get logged in:ssh -p 2220 bandit5@bandit.labs.overthewire.orgpassword: koReBOKuIDDepwhWk7jZC0RTdopnAYKhThere are obviously a few ways that we can tackle this one. The one that sticks out to me is the 1033 byte file size.This is very easy to search with find. And if we do happen to have a lot of files that are 1033 bytes in size, we’ll further refine with the other criteria.So let’s use find and get this party started:# Find in *Everywhere* and print all files 1033 bytes in sizefind * -size 1033c -printThis gives us:maybehere07/.file2We found it! No need to further filter as it’s the only file that is 1033 bytes.Now let’s just read the file and get the password:cat maybehere07/.file2password: DXjZPULLxYr17uwoI01bNLQbtFemEgo7Bam! Now we have the password for the next game!",
+      "url" : " /bandit/security/2022/03/15/level-5-to-6.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-03-13-level-4-to-5-html": {
+      "title": "Level 4 To 5",
+      "content"	 : "Level 4 -&amp;gt; 5Game Instructions  The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.Let’s go ahead and login with the next level bandit4ssh -p 2220 bandit4@bandit.labs.overthewire.orgpassword: pIwrPrtPN36QITSp3EQaw936yaFoFgABBy the instructions of the game, let’s go ahead and execute the reset command. Just to clear things up.Now the game is telling us that we need to find the only human-readable file in the inhere directory.Let’s cd into the inhere directory to get to work:cd inhereWhen we ls this directory, we’ll see a bunch of files starting with that pesky - that we came across earlier. So we know that we’re going to have to use ./ to cat them effectively.This particular exercise is best tackled manually. We’ll simply cat each file and look for human-readable text:cat ./-file00 ./-file01 ./-file02 ./-file03 ./-file04 ./-file05 ./-file06 ./-file07 ./-file08 ./-file09??????????~%C[?걱&amp;gt;??| ????U&quot;7?w???H??ê?Q??(???#????T?v??(?ִ?????A*?2J?Ş؇_?y7?.A??u??#???w$N?c?-??Db3??=???=&amp;lt;?W?????ht?Z??!??{?U    ?+??pm???;??:D??^??@?gl?Q??@?%@???ZP*E??1?V???̫*????koReBOKuIDDepwhWk7jZC0RTdopnAYKhFPn?  &#39;?U???M??/u XS?mu?z???хN?{??Y?d4????]3?????9(?Do you see the human-readable text? Yep! That’s right:koReBOKuIDDepwhWk7jZC0RTdopnAYKhNow we have the password for bandit5",
+      "url" : " /bandit/security/2022/03/13/level-4-to-5.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-03-11-level-3-to-4-html": {
+      "title": "Level 3 To 4",
+      "content"	 : "Level 3 -&amp;gt; 4Game Instructions  The password for the next level is stored in a hidden file in the inhere directory.Let’s get this one going the same way we have been. Using the next level up login bandit3ssh -p 2220 bandit3@bandit.labs.overthewire.orgpassword: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luKNext you’ll need to navigate into the inhere directory:cd inhereOnce inside the directory, we’ll need to list all files. Now a simple ls to list files will return blank here. So we’ll need to add the -a flag to show hidden files.ls -aAlright! Now we have a file to work with named .hiddenLet’s cat the .hidden file to see what’s inside:cat .hiddenpIwrPrtPN36QITSp3EQaw936yaFoFgABNice! Now we have the password for the next level!!",
+      "url" : " /bandit/security/2022/03/11/level-3-to-4.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-03-03-level-2-to-3-html": {
+      "title": "Level 2 To 3",
+      "content"	 : "Level 2 -&amp;gt; 3Game Instructions  The password for the next level is stored in a file called spaces in this filename located in the home directoryFirst, let’s login using the previous password and the next login of bandit2:ssh -p 2220 bandit2@bandit.labs.overthewire.orgpassword: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9So this one is fairly simple. You just need to understand how spaces &quot; &quot; work on the command line. If you just simply run cat spaces in this filename, you’ll get Thiscat: spaces: No such file or directorycat: in: No such file or directorycat: this: No such file or directorycat: filename: No such file or directoryThis is because separating by spaces will always look for another file. Basically you’re asking cat to look for 4 different files. So we need to escape the spaces.There are two options here:  We can escape each spacecat spaces in this filename… escaping each space OR;  We can encapsulate the entire string in &quot; &quot;cat &quot;spaces in this filename&quot;Either one will make sure that cat treats the whole string as one file name… giving you the next password in the series:UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK",
+      "url" : " /bandit/security/2022/03/03/level-2-to-3.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-security-2022-03-01-level-1-to-2-html": {
+      "title": "Level 1 To 2",
+      "content"	 : "Level 1 -&amp;gt; 2Game Instructions  The password for the next level is stored in a file called - located in the home directoryThis level is also quite simple. The password for the next level is stored in a file named -. So all we have to do is ssh using the next level bandit1 username and  use cat to read the file… right?cat -...Nope!!! They pulled a sneaky on you. Notice that when you try this, the command line will stall.In bash, the - will tell the interpreter to look for a flag. So what we need to do here is tell the command line that - is a file. How do we do this? With ./State that this current directory, look for file:cat ./-CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9Boom! now you have the password and you’ve hacked the mainframe. Now let’s go to the next level.Password: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9",
+      "url" : " /bandit/security/2022/03/01/level-1-to-2.html",
+      "author" : "mike",
+      "categories" : "bandit, security"
+    }
+    ,
+  
+
+    "bandit-2022-02-12-level-0-to-1-html": {
+      "title": "Level 0 To 1",
+      "content"	 : "Level 0 -&amp;gt; 1Game Instructions  The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.Super simple setup here. Just cat the readme file:cat readmeboJ9jbbUNNfktd78OOpsqOltutMc3MY1Bam! Password revealed. Now let’s use the password for the next level.Password: boJ9jbbUNNfktd78OOpsqOltutMc3MY1",
+      "url" : " /bandit/2022/02/12/level-0-to-1.html",
+      "author" : "mike",
+      "categories" : "bandit"
+    }
+    ,
+  
+
+    "bandit-2022-02-01-level-0-html": {
+      "title": "Level 0",
+      "content"	 : "Level 0Game Instructions  The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.This level is the most basic of levels. It simply needs you to ssh into the game.You’ll need the login credentials (obviously):username: bandit0password: bandit0All we have to do here is ssh into the WarGames.We do this by using the ssh command with the -p flag on the port 2220 and the bandit0 username:ssh -p 2220 bandit0@bandit.labs.overthewire.orgThen just use the password bandit0 when prompted.That’s it! You’re on your way to being a hacker!",
+      "url" : " /bandit/2022/02/01/level-0.html",
+      "author" : "mike",
+      "categories" : "bandit"
+    }
+    
+  
+}

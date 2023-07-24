@@ -1,0 +1,841 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>wargames</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<!-- Insert google analytics here -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6G08EX2H2Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6G08EX2H2Q');
+</script>
+
+  <body>
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">OTW</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li> -->
+        
+        <li class="nav-item">
+          <a class ="nav-link" href="/blog.html" >wargames</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class ="nav-link" href="/search.html" >search</a>
+        </li>
+        
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li> -->
+<!-- add drop down for bandit category -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            bandit
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            
+             <li> &nbsp; <a href="/bandit/security/2022/05/30/level-32-to-33.html">Level 32 To 33</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/05/28/level-31-to-32.html">Level 31 To 32</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/05/25/level-30-to-31.html">Level 30 To 31</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/05/22/level-29-to-30.html">Level 29 To 30</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/05/15/level-28-to-29.html">Level 28 To 29</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/05/13/level-27-to-28.html">Level 27 To 28</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/05/12/level-26-tp-27.html">Level 26 Tp 27</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/05/11/level-25-to-26.html">Level 25 To 26</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/05/03/level-24-to-25.html">Level 24 To 25</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/05/02/level-23-to-24.html">Level 23 To 24</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/30/level-22-to-23.html">Level 22 To 23</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/27/level-21-to-22.html">Level 21 To 22</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/25/level-20-to-21.html">Level 20 To 21</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/22/leve-19-to-20.html">Leve 19 To 20</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/15/level-18-to-19.html">Level 18 To 19</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/11/level-17-to-18.html">Level 17 To 18</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/09/level-16-to-17.html">Level 16 To 17</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/07/level-15-to-16.html">Level 15 To 16</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/05/level-14-to-15.html">Level 14 To 15</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/04/level-13-to-14.html">Level 13 To 14</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/03/level-12-to-13.html">Level 12 To 13</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/04/02/level-11-to-12.html">Level 11 To 12</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/03/21/level-10-to-11.html">Level 10 To 11</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/03/20/level-9-to-10.html">Level 9 To 10</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/03/18/level-8-to-9.html">Level 8 To 9</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/03/17/level-7-to-8.html">Level 7 To 8</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/03/16/level-6-to-7.html">Level 6 To 7</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/03/15/level-5-to-6.html">Level 5 To 6</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/03/13/level-4-to-5.html">Level 4 To 5</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/03/11/level-3-to-4.html">Level 3 To 4</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/03/03/level-2-to-3.html">Level 2 To 3</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/03/01/level-1-to-2.html">Level 1 To 2</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/02/12/level-0-to-1.html">Level 0 To 1</a></li>
+            
+             <li> &nbsp; <a href="/bandit/security/2022/02/01/level-0.html">Level 0</a></li>
+            
+          </ul>
+        </div>
+        <!-- add drop down for natas category -->
+                <div class="btn-group">
+                  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    natas
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    
+                  </ul>
+                </div>
+
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="container">
+      <div class="row">
+            <div class="col">
+              <h1 id="wargames">Wargames</h1>
+
+<p>A personal tracking of my exercises at <a href="http://www.overthewire.org">OverTheWire</a></p>
+
+<ul>
+  <li>TODO List:
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><del>go back over exercise 23 -&gt; 24</del></li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />clean up syntax references on code snippets</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><del>clean up overall formatting</del></li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />create separate scripts to add to repo</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />check for new exercises in the bandit category</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />add natas</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Wargames is an service setup by the awesome folks at <a href="http://www.overthewire.org">OverTheWire</a>.</p>
+
+<p>It tests one’s ability to exercise certain security concepts in the form of games.</p>
+
+<p>The best part is that it’s FREE and can be started by a complete beginner!!</p>
+
+<h2 id="modules">Modules</h2>
+<p>There are a few different “games” within the WarGames. Each is essentially getting more advanced on it’s way:</p>
+
+<p><a href="#Bandit">Bandit</a></p>
+
+<p>Modules:</p>
+<ul>
+  <li><del>Bandit</del></li>
+  <li>Natas</li>
+  <li>Leviathon</li>
+  <li>Krypton</li>
+  <li>Narnia</li>
+  <li>Behemoth</li>
+  <li>Utumno</li>
+  <li>Maze</li>
+  <li>Vortex</li>
+  <li>Semtex</li>
+  <li>Manpage</li>
+  <li>Drifter</li>
+</ul>
+
+<p>Let’s just get started with Bandit</p>
+
+<p><a href="/bandit/security/2022/02/01/level-0.html">Bandit</a></p>
+<h1>Latest Posts</h1>
+
+<ul>
+  
+    <li>
+      <p><a href="/bandit/security/2022/05/30/level-32-to-33.html">Level 32 To 33</a></p>
+      <!-- <h3 id="level-32---33">Level 32 -&gt; 33</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>After all this git stuff its time for another escape. Good luck!</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/05/28/level-31-to-32.html">Level 31 To 32</a></p>
+      <!-- <h3 id="level-31---32">Level 31 -&gt; 32</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>There is a git repository at ssh://bandit31-git@localhost/home/bandit31-git/repo. The password for the user bandit31-git is the same as for the user bandit31.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/05/25/level-30-to-31.html">Level 30 To 31</a></p>
+      <!-- <h3 id="level-30---31">Level 30 -&gt; 31</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>There is a git repository at ssh://bandit30-git@localhost/home/bandit30-git/repo. The password for the user bandit30-git is the same as for the user bandit30.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/05/22/level-29-to-30.html">Level 29 To 30</a></p>
+      <!-- <h3 id="level-29---30">Level 29 -&gt; 30</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>There is a git repository at ssh://bandit29-git@localhost/home/bandit29-git/repo. The password for the user bandit29-git is the same as for the user bandit29.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/05/15/level-28-to-29.html">Level 28 To 29</a></p>
+      <!-- <h3 id="level-28---29">Level 28 -&gt; 29</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>There is a git repository at ssh://bandit28-git@localhost/home/bandit28-git/repo. The password for the user bandit28-git is the same as for the user bandit28.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/05/13/level-27-to-28.html">Level 27 To 28</a></p>
+      <!-- <h3 id="level-27-28">Level 27-28</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>There is a git repository at ssh://bandit27-git@localhost/home/bandit27-git/repo. The password for the user bandit27-git is the same as for the user bandit27.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/05/12/level-26-tp-27.html">Level 26 Tp 27</a></p>
+      <!-- <h3 id="level-26---27">Level 26 -&gt; 27</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>Good job getting a shell! Now hurry and grab the password for bandit27!</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/05/11/level-25-to-26.html">Level 25 To 26</a></p>
+      <!-- <h3 id="level-25---26">Level 25 -&gt; 26</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>Logging in to bandit26 from bandit25 should be fairly easy… The shell for user bandit26 is not /bin/bash, but something else. Find out what it is, how it works and how to break out of it.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/05/03/level-24-to-25.html">Level 24 To 25</a></p>
+      <!-- <h3 id="level-24---25">Level 24 -&gt; 25</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/05/02/level-23-to-24.html">Level 23 To 24</a></p>
+      <!-- <h3 id="level-23---24">Level 23 -&gt; 24</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/30/level-22-to-23.html">Level 22 To 23</a></p>
+      <!-- <h3 id="level-22---23">Level 22 -&gt; 23</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/27/level-21-to-22.html">Level 21 To 22</a></p>
+      <!-- <h3 id="level-21---22">Level 21 -&gt; 22</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/25/level-20-to-21.html">Level 20 To 21</a></p>
+      <!-- <h3 id="level-20---21">Level 20 -&gt; 21</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>There is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/22/leve-19-to-20.html">Leve 19 To 20</a></p>
+      <!-- <h3 id="level-19---20">Level 19 -&gt; 20</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>To gain access to the next level, you should use the setuid binary in the homedirectory. Execute it without arguments to find out how to use it. The password for this level can be found in the usual place (/etc/bandit_pass), after you have used the setuid binary.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/15/level-18-to-19.html">Level 18 To 19</a></p>
+      <!-- <h3 id="level-18---19">Level 18 -&gt; 19</h3>
+<h4 id="game-instructions">Game instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/11/level-17-to-18.html">Level 17 To 18</a></p>
+      <!-- <h3 id="level-17---18">Level 17 -&gt; 18</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>There are 2 files in the homedirectory: passwords.old and passwords.new. The password for the next level is in passwords.new and is the only line that has been changed between passwords.old and passwords.new</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/09/level-16-to-17.html">Level 16 To 17</a></p>
+      <!-- <h3 id="level-16---17">Level 16 -&gt; 17</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL and which don’t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/07/level-15-to-16.html">Level 15 To 16</a></p>
+      <!-- <h3 id="level-15---16">Level 15 -&gt; 16</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/05/level-14-to-15.html">Level 14 To 15</a></p>
+      <!-- <h3 id="level-14---15">Level 14 -&gt; 15</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/04/level-13-to-14.html">Level 13 To 14</a></p>
+      <!-- <h3 id="level-13---14">Level 13 -&gt; 14</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/03/level-12-to-13.html">Level 12 To 13</a></p>
+      <!-- <h3 id="level-12---13">Level 12 -&gt; 13</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!)</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/04/02/level-11-to-12.html">Level 11 To 12</a></p>
+      <!-- <h3 id="level-11---12">Level 11 -&gt; 12</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/03/21/level-10-to-11.html">Level 10 To 11</a></p>
+      <!-- <h3 id="level-10---11">Level 10 -&gt; 11</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in the file data.txt, which contains base64 encoded data</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/03/20/level-9-to-10.html">Level 9 To 10</a></p>
+      <!-- <h3 id="level-9---10">Level 9 -&gt; 10</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/03/18/level-8-to-9.html">Level 8 To 9</a></p>
+      <!-- <h3 id="level-8---9">Level 8 -&gt; 9</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in the file data.txt and is the only line of text that occurs only once</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/03/17/level-7-to-8.html">Level 7 To 8</a></p>
+      <!-- <h3 id="level-7---8">Level 7 -&gt; 8</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in the file data.txt next to the word millionth</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/03/16/level-6-to-7.html">Level 6 To 7</a></p>
+      <!-- <h3 id="level-6---7">Level 6 -&gt; 7</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored somewhere on the server and has all of the following properties:
+owned by user bandit7
+owned by group bandit6
+33 bytes in size</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/03/15/level-5-to-6.html">Level 5 To 6</a></p>
+      <!-- <h3 id="level-5---6">Level 5 -&gt; 6</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+human-readable
+1033 bytes in size
+not executable</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/03/13/level-4-to-5.html">Level 4 To 5</a></p>
+      <!-- <h3 id="level-4---5">Level 4 -&gt; 5</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/03/11/level-3-to-4.html">Level 3 To 4</a></p>
+      <!-- <h3 id="level-3---4">Level 3 -&gt; 4</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in a hidden file in the inhere directory.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/03/03/level-2-to-3.html">Level 2 To 3</a></p>
+      <!-- <h3 id="level-2---3">Level 2 -&gt; 3</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in a file called spaces in this filename located in the home directory</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/03/01/level-1-to-2.html">Level 1 To 2</a></p>
+      <!-- <h3 id="level-1---2">Level 1 -&gt; 2</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in a file called - located in the home directory</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/02/12/level-0-to-1.html">Level 0 To 1</a></p>
+      <!-- <h3 id="level-0---1">Level 0 -&gt; 1</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.</p>
+</blockquote>
+ -->
+    </li>
+  
+    <li>
+      <p><a href="/bandit/security/2022/02/01/level-0.html">Level 0</a></p>
+      <!-- <h3 id="level-0">Level 0</h3>
+<h4 id="game-instructions">Game Instructions</h4>
+<blockquote>
+  <p>The goal of this level is for you to log into the game using SSH. The host to which you need to connect is <code class="language-plaintext highlighter-rouge">bandit.labs.overthewire.org</code>, on <code class="language-plaintext highlighter-rouge">port 2220</code>. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.</p>
+</blockquote>
+ -->
+    </li>
+  
+</ul>
+
+            </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <div class="container">
+<p>wargames</p>
+
+<!-- <h4>Bandit</h4>
+<ul>
+
+
+  <li>
+    <a href="/bandit/security/2022/05/30/level-32-to-33.html">Level 32 To 33</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/05/28/level-31-to-32.html">Level 31 To 32</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/05/25/level-30-to-31.html">Level 30 To 31</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/05/22/level-29-to-30.html">Level 29 To 30</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/05/15/level-28-to-29.html">Level 28 To 29</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/05/13/level-27-to-28.html">Level 27 To 28</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/05/12/level-26-tp-27.html">Level 26 Tp 27</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/05/11/level-25-to-26.html">Level 25 To 26</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/05/03/level-24-to-25.html">Level 24 To 25</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/05/02/level-23-to-24.html">Level 23 To 24</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/30/level-22-to-23.html">Level 22 To 23</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/27/level-21-to-22.html">Level 21 To 22</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/25/level-20-to-21.html">Level 20 To 21</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/22/leve-19-to-20.html">Leve 19 To 20</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/15/level-18-to-19.html">Level 18 To 19</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/11/level-17-to-18.html">Level 17 To 18</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/09/level-16-to-17.html">Level 16 To 17</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/07/level-15-to-16.html">Level 15 To 16</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/05/level-14-to-15.html">Level 14 To 15</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/04/level-13-to-14.html">Level 13 To 14</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/03/level-12-to-13.html">Level 12 To 13</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/04/02/level-11-to-12.html">Level 11 To 12</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/03/21/level-10-to-11.html">Level 10 To 11</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/03/20/level-9-to-10.html">Level 9 To 10</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/03/18/level-8-to-9.html">Level 8 To 9</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/03/17/level-7-to-8.html">Level 7 To 8</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/03/16/level-6-to-7.html">Level 6 To 7</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/03/15/level-5-to-6.html">Level 5 To 6</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/03/13/level-4-to-5.html">Level 4 To 5</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/03/11/level-3-to-4.html">Level 3 To 4</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/03/03/level-2-to-3.html">Level 2 To 3</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/03/01/level-1-to-2.html">Level 1 To 2</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/02/12/level-0-to-1.html">Level 0 To 1</a>
+  </li>
+
+
+  <li>
+    <a href="/bandit/security/2022/02/01/level-0.html">Level 0</a>
+  </li>
+
+
+</ul> -->
+<!-- Display only bandit posts -->
+
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    bandit
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    
+     <li> &nbsp; <a href="/bandit/security/2022/05/30/level-32-to-33.html">Level 32 To 33</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/05/28/level-31-to-32.html">Level 31 To 32</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/05/25/level-30-to-31.html">Level 30 To 31</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/05/22/level-29-to-30.html">Level 29 To 30</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/05/15/level-28-to-29.html">Level 28 To 29</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/05/13/level-27-to-28.html">Level 27 To 28</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/05/12/level-26-tp-27.html">Level 26 Tp 27</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/05/11/level-25-to-26.html">Level 25 To 26</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/05/03/level-24-to-25.html">Level 24 To 25</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/05/02/level-23-to-24.html">Level 23 To 24</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/30/level-22-to-23.html">Level 22 To 23</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/27/level-21-to-22.html">Level 21 To 22</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/25/level-20-to-21.html">Level 20 To 21</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/22/leve-19-to-20.html">Leve 19 To 20</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/15/level-18-to-19.html">Level 18 To 19</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/11/level-17-to-18.html">Level 17 To 18</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/09/level-16-to-17.html">Level 16 To 17</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/07/level-15-to-16.html">Level 15 To 16</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/05/level-14-to-15.html">Level 14 To 15</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/04/level-13-to-14.html">Level 13 To 14</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/03/level-12-to-13.html">Level 12 To 13</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/04/02/level-11-to-12.html">Level 11 To 12</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/03/21/level-10-to-11.html">Level 10 To 11</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/03/20/level-9-to-10.html">Level 9 To 10</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/03/18/level-8-to-9.html">Level 8 To 9</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/03/17/level-7-to-8.html">Level 7 To 8</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/03/16/level-6-to-7.html">Level 6 To 7</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/03/15/level-5-to-6.html">Level 5 To 6</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/03/13/level-4-to-5.html">Level 4 To 5</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/03/11/level-3-to-4.html">Level 3 To 4</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/03/03/level-2-to-3.html">Level 2 To 3</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/03/01/level-1-to-2.html">Level 1 To 2</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/02/12/level-0-to-1.html">Level 0 To 1</a></li>
+    
+     <li> &nbsp; <a href="/bandit/security/2022/02/01/level-0.html">Level 0</a></li>
+    
+  </ul>
+</div>
+
+<!-- add drop down for natas category -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            natas
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            
+          </ul>
+        </div>
+
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <p>footer</p>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<!-- <script src="https://unpkg.com/lunr/lunr.js"></script> -->
+
+  </body>
+</html>
