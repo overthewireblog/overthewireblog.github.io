@@ -9,6 +9,7 @@ title: wargames
 A personal tracking of my exercises at [OverTheWire](http://www.overthewire.org)
 
 - TODO List:
+  - [ ] Better code blocks 
   - [x] ~~go back over exercise 23 -> 24~~
   - [ ] clean up syntax references on code snippets
   - [x] ~~clean up overall formatting~~

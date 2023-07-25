@@ -35,6 +35,7 @@ plugins             : []
 
 # Conversion
 markdown            : kramdown
+# markdown            : redcarpet
 highlighter         : rouge
 lsi                 : false
 excerpt_separator   : "\n\n"
