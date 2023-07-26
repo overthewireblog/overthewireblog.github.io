@@ -9,7 +9,7 @@ title: wargames
 A personal tracking of my exercises at [OverTheWire](http://www.overthewire.org)
 
 - TODO List:
-  - [ ] Better code blocks 
+  - [ ] Better code blocks
   - [x] ~~go back over exercise 23 -> 24~~
   - [ ] clean up syntax references on code snippets
   - [x] ~~clean up overall formatting~~
@@ -47,11 +47,11 @@ Let's just get started with Bandit
 [Bandit](/bandit/security/2022/02/01/level-0.html)
 <h1>Latest Posts</h1>
 
-<ul>
+<!-- <ul>
   {% for post in site.posts %}
     <li>
       <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-      <!-- {{ post.excerpt }} -->
+      {{ post.excerpt }}
     </li>
   {% endfor %}
-</ul>
+</ul> -->
