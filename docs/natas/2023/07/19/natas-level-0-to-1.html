@@ -2,7 +2,7 @@
 <html>
   <head>
   <meta charset="utf-8">
-  <title>Bandit Level 11 To 12</title>
+  <title>Natas Level 0 To 1</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -170,42 +170,62 @@
     <div class="container">
       <div class="row">
             <div class="col">
-              <h1>Bandit Level 11 To 12</h1>
-<p>02 Apr 2022 - mike</p>
+              <h1>Natas Level 0 To 1</h1>
+<p>19 Jul 2023 - mike</p>
 
-<h3 id="level-11---12">Level 11 -&gt; 12</h3>
+<h3 id="level-0---1">Level 0 -&gt; 1</h3>
 <h4 id="game-instructions">Game Instructions</h4>
 <blockquote>
-  <p>The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions</p>
+  <p>Figure it out</p>
 </blockquote>
 
-<p><code class="language-plaintext highlighter-rouge">ssh</code> into the server</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh <span class="nt">-p</span> 2220 bandit11@bandit.labs.overthewire.org
-password: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+<p>Let’s go to our next level and use the password we just got:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Username: natas1
+URL:      http://natas1.natas.labs.overthewire.org
 </code></pre></div></div>
-<p>When we <code class="language-plaintext highlighter-rouge">cat</code> the <code class="language-plaintext highlighter-rouge">data.txt</code> file, we get this jumble:
-<code class="language-plaintext highlighter-rouge">Gur cnffjbeq vf 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHh</code></p>
 
-<p>Based off of the game description. We know it is just rotated text 13 times. (Look up <strong>rot13</strong>)</p>
+<p>This one they blocked the <strong>right-click</strong> ability. So we’ll just use a keyboard shortcut to open up <strong>inspector</strong></p>
 
-<p>Here we’ll use <code class="language-plaintext highlighter-rouge">tr</code> to reverse the rot13 “encryption”. A primitive form of letter scrambling (not secure).</p>
+<p>On Safari it’s <code class="language-plaintext highlighter-rouge">CMD+Opt+U</code> but any browser has one.</p>
 
-<p><code class="language-plaintext highlighter-rouge">cat data.txt | tr 'n-za-mN-ZA-M' 'a-zA-Z'</code></p>
+<p>Now we can see the code:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="c">&lt;!-- This stuff in the header has nothing to do with the level --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"http://natas.labs.overthewire.org/css/level.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://natas.labs.overthewire.org/css/jquery-ui.css"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://natas.labs.overthewire.org/css/wechall.css"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://natas.labs.overthewire.org/js/jquery-1.9.1.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://natas.labs.overthewire.org/js/jquery-ui.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">http://natas.labs.overthewire.org/js/wechall-data.js</span><span class="nt">&gt;&lt;/script&gt;&lt;script </span><span class="na">src=</span><span class="s">"http://natas.labs.overthewire.org/js/wechall.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span><span class="kd">var</span> <span class="nx">wechallinfo</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">level</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">natas1</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">pass</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">g9D9cREhslqBKtcA2uocGHPfMZVzeFK6</span><span class="dl">"</span> <span class="p">};</span><span class="nt">&lt;/script&gt;&lt;/head&gt;</span>
+<span class="nt">&lt;body</span> <span class="na">oncontextmenu=</span><span class="s">"javascript:alert('right clicking has been blocked!');return false;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;h1&gt;</span>natas1<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+You can find the password for the
+next level on this page, but rightclicking has been blocked!
 
-<p>Now we get a print of:
-<code class="language-plaintext highlighter-rouge">The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu</code></p>
+<span class="c">&lt;!--The password for natas2 is h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7 --&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>Just like last time, the password is in the source at the bottom.</p>
 
-<p>All set for the next level.</p>
+<p>Password:
+<code class="language-plaintext highlighter-rouge">h4ubbcXrWqsTo7GGnnUMLppXbOogfBZ7</code></p>
+
+<p>Boom. Now let’s get to the next one.</p>
 
 
 
 <div class="post-nav">
   <div>
     
-      <a href="/bandit/2022/03/21/bandit-level-10-to-11.html">
+      <a href="/natas/2023/07/18/natas-level-0.html">
         <span class="unsighted">Previous post:</span>
         <span aria-hidden="true">&laquo;</span>
-        Bandit Level 10 To 11
+        Natas Level 0
       </a>
     
   </div>
@@ -215,11 +235,11 @@ password: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
     
     
     
-    <a href="/bandit/2022/04/03/bandit-level-12-to-13.html">
+    <a href="/natas/2023/07/19/natas-level-1-to-2.html">
       <span class="unsighted">Next post:</span>
-      Bandit Level 12 To
+      Natas Level 1 To
       <span style="white-space: nowrap;">
-      13
+      2
       <span aria-hidden="true">&raquo;</span>
       </span>
     </a>
@@ -228,7 +248,7 @@ password: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
     <!-- <div class="post-categories">
       
       
-      <a href="/categories/#bandit">bandit</a>
+      <a href="/categories/#natas">natas</a>
       
       
     </div> -->

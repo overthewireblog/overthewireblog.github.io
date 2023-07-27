@@ -2,7 +2,7 @@
 <html>
   <head>
   <meta charset="utf-8">
-  <title>Bandit Level 11 To 12</title>
+  <title>Natas Level 2 To 3</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -170,42 +170,74 @@
     <div class="container">
       <div class="row">
             <div class="col">
-              <h1>Bandit Level 11 To 12</h1>
-<p>02 Apr 2022 - mike</p>
+              <h1>Natas Level 2 To 3</h1>
+<p>20 Jul 2023 - mike</p>
 
-<h3 id="level-11---12">Level 11 -&gt; 12</h3>
+<h3 id="level-2---3">Level 2 -&gt; 3</h3>
 <h4 id="game-instructions">Game Instructions</h4>
 <blockquote>
-  <p>The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions</p>
+
 </blockquote>
 
-<p><code class="language-plaintext highlighter-rouge">ssh</code> into the server</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh <span class="nt">-p</span> 2220 bandit11@bandit.labs.overthewire.org
-password: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
+<p>First let’s get logged in at the new URL:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Username: natas3
+URL:      http://natas3.natas.labs.overthewire.org
 </code></pre></div></div>
-<p>When we <code class="language-plaintext highlighter-rouge">cat</code> the <code class="language-plaintext highlighter-rouge">data.txt</code> file, we get this jumble:
-<code class="language-plaintext highlighter-rouge">Gur cnffjbeq vf 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHh</code></p>
+<p>Again they give us the <em>There’s nothing on this page</em>. Let’s check the source code anyway:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="c">&lt;!-- This stuff in the header has nothing to do with the level --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"http://natas.labs.overthewire.org/css/level.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://natas.labs.overthewire.org/css/jquery-ui.css"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://natas.labs.overthewire.org/css/wechall.css"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://natas.labs.overthewire.org/js/jquery-1.9.1.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://natas.labs.overthewire.org/js/jquery-ui.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">http://natas.labs.overthewire.org/js/wechall-data.js</span><span class="nt">&gt;&lt;/script&gt;&lt;script </span><span class="na">src=</span><span class="s">"http://natas.labs.overthewire.org/js/wechall.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span><span class="kd">var</span> <span class="nx">wechallinfo</span> <span class="o">=</span> <span class="p">{</span> <span class="dl">"</span><span class="s2">level</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">natas3</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">pass</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">G6ctbMJ5Nb4cbFwhpMPSvxGHhQ7I6W8Q</span><span class="dl">"</span> <span class="p">};</span><span class="nt">&lt;/script&gt;&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;h1&gt;</span>natas3<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+There is nothing on this page
+<span class="c">&lt;!-- No more information leaks!! Not even Google will find it this time... --&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;&lt;/html&gt;</span>
+</code></pre></div></div>
 
-<p>Based off of the game description. We know it is just rotated text 13 times. (Look up <strong>rot13</strong>)</p>
+<p>Here we see the message</p>
+<blockquote>
+  <p>“No more information leaks!! Not even Google will find it this tim…”</p>
+</blockquote>
 
-<p>Here we’ll use <code class="language-plaintext highlighter-rouge">tr</code> to reverse the rot13 “encryption”. A primitive form of letter scrambling (not secure).</p>
+<p>Interesting statement. Google can’t find it. Then it must be in the <code class="language-plaintext highlighter-rouge">robots.txt</code> file…</p>
 
-<p><code class="language-plaintext highlighter-rouge">cat data.txt | tr 'n-za-mN-ZA-M' 'a-zA-Z'</code></p>
+<p>Let’s go to it and see:
+<code class="language-plaintext highlighter-rouge">http://natas3.natas.labs.overthewire.org/robots.txt</code></p>
 
-<p>Now we get a print of:
-<code class="language-plaintext highlighter-rouge">The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu</code></p>
+<p>And not we see this:</p>
 
-<p>All set for the next level.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: *
+Disallow: /s3cr3t/
+</code></pre></div></div>
+
+<p>Looks like there is a directory called <code class="language-plaintext highlighter-rouge">/s3cr3t/</code>. No way this could have anything in it :o</p>
+
+<p>Lets check it out by navigating straight to it:
+<code class="language-plaintext highlighter-rouge">http://natas3.natas.labs.overthewire.org/s3cr3t/</code></p>
+
+<p>Yay! Another <code class="language-plaintext highlighter-rouge">users.txt</code> file. What’s in it?</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>natas4:tKOcJIbzM4lTs8hbCmzn5Zr4434fGZQm
+</code></pre></div></div>
+<p>The password of course! Alright let’s get going to the next one…</p>
 
 
 
 <div class="post-nav">
   <div>
     
-      <a href="/bandit/2022/03/21/bandit-level-10-to-11.html">
+      <a href="/natas/2023/07/19/natas-level-1-to-2.html">
         <span class="unsighted">Previous post:</span>
         <span aria-hidden="true">&laquo;</span>
-        Bandit Level 10 To 11
+        Natas Level 1 To 2
       </a>
     
   </div>
@@ -215,11 +247,11 @@ password: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
     
     
     
-    <a href="/bandit/2022/04/03/bandit-level-12-to-13.html">
+    <a href="/natas/2023/07/21/natas-level-3-to-4.html">
       <span class="unsighted">Next post:</span>
-      Bandit Level 12 To
+      Natas Level 3 To
       <span style="white-space: nowrap;">
-      13
+      4
       <span aria-hidden="true">&raquo;</span>
       </span>
     </a>
@@ -228,7 +260,7 @@ password: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
     <!-- <div class="post-categories">
       
       
-      <a href="/categories/#bandit">bandit</a>
+      <a href="/categories/#natas">natas</a>
       
       
     </div> -->
